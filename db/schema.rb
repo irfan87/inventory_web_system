@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112072848) do
+ActiveRecord::Schema.define(version: 20170112075616) do
 
   create_table "items", force: :cascade do |t|
     t.string   "item_name"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 20170112072848) do
     t.decimal  "item_price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "recipients", force: :cascade do |t|
+    t.string   "recipient_name"
+    t.string   "recipient_address"
+    t.integer  "recipient_post_code"
+    t.string   "recipient_phone_number"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
